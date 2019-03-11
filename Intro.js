@@ -1,20 +1,3 @@
-console.info("My First JS File")
-
-var employed = true;
-var age = 24;
-var name = 'Adrian'
-
-console.warn("employed");
-console.warn(employed);
-
-console.info("name:");
-console.info(name);
-
-name = "Popa";
-
-console.info("name:");
-console.info(name);
-
 function getWelcomeMsg(name) {
     var msg = "Hello " + name + "," + " welcome to FastTrackIT.";
     return msg;
