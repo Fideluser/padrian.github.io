@@ -77,10 +77,9 @@ initMenu();
 function showSkills() {
     var skills = ['html', 'css', 'js'];
     console.warn('showSkills', skills);
-    for (var i = 0; i < skills.length; i++) {
-        printSkills(skills[i], i);
-    }
-    function printSkills(skill, index) {
+    skills.forEach(printSkill);
+    
+    function printSkill(skill, index) {
         console.info("#" + (index + 1) + " " + skill);
     }
 }
