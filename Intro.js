@@ -76,9 +76,13 @@ initMenu();
 
 function showSkills() {
     var skills = ['html', 'css', 'js'];
-    console.warn('showSkills', skills);
-    skills.forEach(function(skill, index) {
-        console.info("#" + (index + 1) + " " + skill);
+
+    var htmlSkills = skills.map(function (skill, index) {
+        return '<li>' + skill + '</li>';
     });
+    console.info(htmlSkills[2]);
+
+    var ul = document.querySelector('#skills-page ul');
+    innerHTML = htmlSkills.join('');
 }
 showSkills();
