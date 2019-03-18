@@ -26,7 +26,7 @@ summaryElement.style.color = color;
 
 // first example
 function hideHomePage() {
-    document.getElementById('home-page').style.display = 'none'
+    document.getElementById('home-page').style.display = 'none';
 }
 function showSkillsPage() {
     document.getElementById('skills-page').style.display = 'block';
@@ -78,7 +78,7 @@ function showSkills() {
     var skills = ['html', 'css', 'js'];
 
     var htmlSkills = skills.map(function (skill, index) {
-        return '<li>' + skill + '</li>';
+        return '<li>' + skill.toUpperCase + '</li>';
     });
     console.info(htmlSkills[2]);
 
