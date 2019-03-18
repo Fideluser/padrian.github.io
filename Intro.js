@@ -47,3 +47,29 @@ function hidePage(page) {
 function showPage(page) {
     document.getElementById(page).style.display = 'block';
 }
+
+function initMenu() {
+    var links = document.querySelectorAll('#top-menu-bar a');
+    console.info(links);
+    for (var i = 0; i < links.length; i++) {
+        console.info("i=", i);
+        console.warn("links"[i])
+        links[i].onclick = clickOnMenuItem;
+    }
+}
+
+function clickOnMenuItem () {
+    console.warn('clicked on menu', this);
+    hideAllPages();
+    var pageId = this.getAttribute('data-page');
+    console.warn({pageId});
+    showPage(pageId);
+}
+
+function hideAllPages () {
+    var pages = document.querySelectorAll ('.page');
+    for(var i = 0; i < pages.length; i++) {
+        pages[i].style.display = 'none';
+    }
+}
+initMenu();
