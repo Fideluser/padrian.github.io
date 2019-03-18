@@ -58,18 +58,27 @@ function initMenu() {
     }
 }
 
-function clickOnMenuItem () {
+function clickOnMenuItem() {
     console.warn('clicked on menu', this);
     hideAllPages();
     var pageId = this.getAttribute('data-page');
-    console.warn({pageId});
+    console.warn({ pageId });
     showPage(pageId);
 }
 
-function hideAllPages () {
-    var pages = document.querySelectorAll ('.page');
-    for(var i = 0; i < pages.length; i++) {
+function hideAllPages() {
+    var pages = document.querySelectorAll('.page');
+    for (var i = 0; i < pages.length; i++) {
         pages[i].style.display = 'none';
     }
 }
 initMenu();
+
+function showSkills() {
+    var skills = ['html', 'css', 'js'];
+    console.warn('showSkills', skills);
+    for(var i = 0; i < skills.length; i++) {
+        console.info("#" + (i + 1) + " ", skills[i]);
+    }
+}
+showSkills();
