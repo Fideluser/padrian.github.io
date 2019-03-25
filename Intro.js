@@ -82,6 +82,10 @@ function showSkills() {
         { name: 'nodejs', endorsments: 3 }
     ];
 
+    skills.sort(function (a, b) {
+        return b.endorsments - a.endorsments;
+    });
+
     var htmlSkills = skills.map(function (skill) {
         var endorsedBy = skill.endorsedBy ? ' - ' + skill.endorsedBy : '';
         var endorsments = ` <span class="endorsment">(${skill.endorsments}${endorsedBy})</span>`;
